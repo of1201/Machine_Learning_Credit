@@ -1,0 +1,17 @@
+1. combine dataset, data cleaning, feature engineering
+   Result: now we have X, y and the training/validation/test sets for model fitting
+	   we also have X_logit, y_logit and the training/validation/test sets for logistic regression
+
+2. Model fitting:
+
+a. hyperparameter tuning for each model: grid search to find the best hyperparameters that min. the cross_val_score 
+	(default score: cross entropy). Use k-folds cv 
+purpose: get the best parameters and optimizer (gradient or newton) for each model
+
+b. evaluation on different models to get the best model: i.AUCROC (k-folds cross-validation)
+	 	ii.confusion matrix
+		
+# Use pipeline!
+
+
+3. test set: a. use the best model to predict
